@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&display=swap" rel="stylesheet">
+    <title>PhotoFeed</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+
+        <!-- Contenedor principal -->
+        <div class="container">
+
+            <!-- Logo y marca -->
+            <div class="d-flex flex-row bd-highlight">
+                <i class="fab fa-instagram fa-2x"></i>
+                <a class="navbar-brand" href="#" style="font-family: 'Oleo Script Swash Caps', cursive;">Instagram</a>
+            </div>
+
+            <!-- Botón disparador modal y engranaje con opciones -->
+            <div class="d-flex flex-row bd-highlight">
+                <button type="button " class="btn btn-success" data-bs-toggle="modal" data-bs-target="#NewPost">Create a
+                    new post</button>
+                <div class="dropdown border-0">
+                    <button class="btn btn-light dropdown-toggle border-0" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- linea de toggle -->
+    <div class="container-fluid">
+        <div class="row>
+        <div class="col-6 position-absolute top-0 start-50 translate-middle-x">
+            <input type="radio" class="btn-check" name="options-outlined" id="bloques-outlined" autocomplete="off"
+                checked>
+            <label class="btn btn-outline-secondary" for="bloques-outlined"><i class="fas fa-th"></i></label>
+            <input type="radio" class="btn-check" name="options-outlined" id="columna-outlined" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="columna-outlined"><i class="fas fa-stop"></i></label>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="NewPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-outline-secondary"><i class="fas fa-camera fa-1x"></i></button>
+                    <button type="button" class="btn btn-outline-secondary"> <i
+                            class="fas fa-map-marker-alt fa-1x"></i></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $('#NewPost').modal('show')
+    </script>
+</body>
+
+</html>
